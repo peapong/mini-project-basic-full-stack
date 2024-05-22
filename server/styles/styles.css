@@ -1,0 +1,128 @@
+/* การตั้งค่าเบื้องต้นสำหรับการแสดงผล */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f9fc;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    animation: slideDown 0.5s ease-out;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: formPop 0.5s ease-in-out;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* อนิเมชันที่ใช้ในหน้าเว็บ */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes formPop {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* CSS สำหรับ Dark Mode */
+body {
+    transition: background-color 0.5s ease; /* เพิ่มเอฟเฟ็กต์การเปลี่ยนสีพื้นหลัง */
+}
+
+.dark-mode {
+    background-color: #333; /* ตั้งค่าสีพื้นหลังเป็นดำ */
+    color: #fff; /* ตั้งค่าสีข้อความเป็นขาว */
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    z-index: 9999; /* ตั้งค่า z-index เพื่อให้ปุ่มอยู่เหนือเนื้อหาอื่นๆ */
+}
+
+#dark-mode-toggle:hover {
+    background-color: #0056b3;
+}
