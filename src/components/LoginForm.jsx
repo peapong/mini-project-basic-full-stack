@@ -23,6 +23,8 @@ function LoginForm({ setIsLogin, setIsLoading }) {
             return response.data;
 
         } catch (error) {
+            setIsInvalidLogin(true);
+            await setIsLoading(false);
             console.error('There was an error fetching the data!', error);
         }
     };
@@ -56,11 +58,11 @@ function LoginForm({ setIsLogin, setIsLoading }) {
         await setIsLoading(true);
         event.preventDefault(); // ป้องกันการ submit ตามปกติ
         const data = await fetchData();
-        if (data.length > 0) {
+        if (data !== void 0 && data !== undefined && data.length > 0) {
             setIsLogin(true);
             await setIsLoading(false);
         }
-        if (data.length === 0) {
+        if (data !== void 0 && data !== undefined && data.length === 0) {
             await setIsLoading(false);
             await setIsLogin(false)
             setIsInvalidLogin(true);
