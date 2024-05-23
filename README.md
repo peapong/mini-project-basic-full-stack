@@ -3,26 +3,31 @@
 
 # username: admin
 # password: 1234
+// ตรวจสอบด้วยการ query ใน database สร้างไว้แค่ account เดียว
 
-### หน้าแรก Login 
-![image](https://imgur.com/Ht24qNj)
+### หน้าแรก Login มีการตรวจสอบเวลา ณ ปัจจุบัน
+<img src="https://imgur.com/Ht24qNj.jpg" width="650" height="480">;
 ### หน้า loading...
-![image](https://imgur.com/B2PVB4O)
+<img src="https://imgur.com/B2PVB4O.jpg" width="650" height="480">;
 ### เข้าสู่ระบบไม่สำเร็จ
-![image](https://imgur.com/VH88NVI)
+<img src="https://imgur.com/VH88NVI.jpg" width="650" height="480">;
 ### หน้า Form การเพิ่มข้อมูลนักเรียน และตารางแสดงและลบข้อมูลนักเรียน
-![image](https://imgur.com/5YMZV0Z)
+<img src="https://imgur.com/5YMZV0Z.jpg" width="650" height="480">;
 ### รูปแบบการกรอกข้อมูล
-![image](https://imgur.com/aKykOEt)
+<img src="https://imgur.com/aKykOEt.jpg" width="650" height="480">;
 ### ข้อมูลเพิ่มสำเร็จ
-![image](https://imgur.com/81QRYgH)
+<img src="https://imgur.com/81QRYgH.jpg" width="650" height="480">;
 ### ลบข้อมูลสำเร็จ ไอดีที่ 16 หายไป
-![image](https://imgur.com/nHD7kiG)
+<img src="https://imgur.com/nHD7kiG.jpg" width="650" height="480">;
 
-### `npm start` or `nodemon`
+### `npm start` or `nodemon` in `Front end`
 
-Runs the app in the development mode.\
+Runs the React app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm start` or `nodemon` in `Backend`
+เข้าไปในโฟลเดอร์ service เพื่อทำการรัน `nodemon` หรือ `npm start`
+Starting Server in [http://localhost:3306](http://localhost:3306)
+1. เปิด terminal
+2. พิมพ์ cd service
+3. พิมพ์ nodemon หรือ npm start
