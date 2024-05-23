@@ -22,7 +22,7 @@ function App() {
               <StudentForm setIsLoading={setIsLoading} setRefetch={setRefetch}/>
             </div>
             <div className="student-table-card">
-              <StudentTable refetch={refetch}/>
+              <StudentTable refetch={refetch} setIsLoading={setIsLoading}/>
             </div>
           </div>
           </>}

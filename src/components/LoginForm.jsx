@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../styles/LoginForm.css';
 import axios from 'axios';
 
@@ -73,6 +73,7 @@ function LoginForm({ setIsLogin, setIsLoading }) {
             <div className="login-form">
                 <h1 className="login-title">สวัสดี {checkTimeMessage(hours)}</h1>
                 <h2 className="login-title">กรุณาเข้าสู่ระบบ</h2>
+                <span style={{color: '#DCDCDC'}}>user: admin pass: 1234</span>
                 <form className="form-box" onSubmit={authLogin}>
                     <div className="input-group">
                         <input

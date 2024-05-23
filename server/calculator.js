@@ -45,6 +45,13 @@ app.get('/student', async (req, res) => {
    }
 });
 
+app.delete('/student/:id', async (req, res) => {
+   const connection = await dbConn;
+   const rows = await connection.query(`DELETE FROM students WHERE students.id = ${req.params.id}`);
+   res.send(rows[0]);
+   // res.sendFile(path.join(__dirname, 'student.html'));
+});
+
 app.post("/create-student", async (req, res)=>{
    const connection = await dbConn;
    const rows = await connection.query(`INSERT INTO students (name, age, phone, email) VALUES ('${req.body.name}', ${req.body.age}, '${req.body.phone}', '${req.body.email}')`);
